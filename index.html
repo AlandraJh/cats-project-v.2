@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="scripts/index.js"></script>
+<title>Милые котики</title>
+<link rel="stylesheet" href="fa/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+<script src="scripts/cats.js"></script>
+<script src="scripts/api.js"></script>
+</head>
+<body>
+<header>
+<a href="" class="logo"><i class="fa-solid fa-paw"></i> Милые котики</a>
+<a class="btn" href="" id="add"><i class="fa-regular fa-plus"></i></a>
+</header>
+<main>
+</main>
+<footer>
+<span>©2023 Made by Alexandra</span>
+<nav>
+<a href=""><i class="fa-brands fa-github-alt"></i></i></i></a>
+<a href=""><i class="fa-brands fa-vk"></i></a>
+<a href=""><i class="fa-brands fa-telegram"></i></a>
+</nav>
+</footer>
+<!-- Попап добавления котов -->
+<div class="popup-wrapper">
+    <div class="popup" id="popup-form">
+    <div class="popup-close btn close-btn"><i class="fa-solid fa-xmark"></i></div>
+    <h2>Добавить питомца</h2>
+    <form action="">
+    <div class="form-img"></div>
+    <input type="number" name="id" min="1" required placeholder="id" id="id-add-cat">
+    <input type="number" name="age" placeholder="Возраст" id="age-add-cat">
+    <input type="text" name="name" required placeholder="Имя" id="name-add-cat">
+    <input type="number" name="rate" placeholder="Рейтинг (0-10)" min="0" max="10" id="rate-add-cat">
+    <textarea name="description" placeholder="Описание"></textarea>
+    <label>Любимчик <input type="checkbox" name="favourite" placeholder=""></label>
+    <input type="text" name="img_link" placeholder="Ссылка на фото" id="imglink-add-cat">
+    <button type="submit" id="add-btn-cat">Добавить котика</button>
+    </form>
+    </div>
+    </div>
+<script src="scripts/script.js" defer></script>
+</body>
+</html>
