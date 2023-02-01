@@ -1,26 +1,5 @@
 let api = new Api("alandrajh-cats"); // Имя из постмана
 
-const addBtn = document.querySelector("#add");
-const popupForm = document.querySelector("#popup-form");
-const closePopupForm = popupForm.querySelector(".popup-close");
-const cardsContainer = document.querySelector(".cards");
-
-// Действие по клику (открытие попапа)
-addBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  // Проверка не имеет ли popupForm класс active и его добавление в случае отсутствия
-  if (!popupForm.classList.contains("active")) {
-    popupForm.classList.add("active");
-    popupForm.parentElement.classList.add("active");
-  }
-});
-// Убираем класс active по закрытию
-closePopupForm.addEventListener("click", () => {
-  popupForm.classList.remove("active");
-  popupForm.parentElement.classList.remove("active");
-});
-
 // Добавление котов в базу по сабмиту
 
 let form = document.forms[0];
@@ -111,6 +90,8 @@ const getCats = function (api, store) {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+
+
         if (data.message === "ok") {
           localStorage.setItem("cats", JSON.stringify(data.data));
           catsData = [...data.data];
@@ -122,3 +103,13 @@ const getCats = function (api, store) {
   }
 };
 getCats(api, catsData);
+
+
+
+// document.cookie = 'email=test@yandex.ru;samesite=strict;max-age=360;';
+// document.cookie = 'name=Александр;samesite=strict;max-age=360;';
+
+
+// Cookies.set('foo', 'bar')
+// const cookieValue = Cookies.get('foo')
+// console.log(cookieValue);

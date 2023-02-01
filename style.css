@@ -132,6 +132,15 @@ main {
     right: 10px;
 }
 
+.closePopupUser {
+    margin-left: 300px;
+    margin-bottom: 20px;
+    width: 50px;
+}
+
+.user-form-grupp{
+    margin-top: 20px;
+}
 /* Форма добавления кота */
 
 .popup-wrapper {
@@ -172,6 +181,7 @@ main {
 .popup.active {
     display: block;
 }
+
 
 .popup-close {
     width: max-content;
@@ -294,6 +304,16 @@ form button:active {
 
     .fa-brands {
         font-size: 30px;
+    }
+
+    .closePopupUser {
+        margin-left: 500px;
+        margin-bottom: 50px;
+        width: 50px;
+    }
+    
+    .user-form-grupp{
+        margin-top: 50px;
     }
 
 }
